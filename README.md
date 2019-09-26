@@ -18,16 +18,21 @@ Como a base extraída será utilizada para a estimação de parâmetros e valida
 4. Usando a API do Scopus, extrair e armazenar as informações das referências de cada artigo.
 
 
-## Instalações Requeridas
+## Algumas das Instalações Requeridas
 
 A coleta dos dados foi feita utilizando uma API-Wrapper baseada em Python para acessar o Scopus.
 
-* [pybliometrics](https://github.com/pybliometrics-dev/pybliometrics/) é uma biblioteca do Python para para extrair, armazenar em cache e extrair dados do banco de dados Scopus. A documentação encontra-se [aqui](https://pybliometrics.readthedocs.io/en/stable/). Para a geração das chaves para API: [Elsevier Developers](https://dev.elsevier.com/apikey/manage).
+* [pybliometrics](https://github.com/pybliometrics-dev/pybliometrics/) é uma biblioteca do Python para para extrair, armazenar em cache e extrair dados do banco de dados Scopus. A documentação encontra-se [aqui](https://pybliometrics.readthedocs.io/en/stable/). Para a geração das chaves para API: [Elsevier Developers](https://dev.elsevier.com/apikey/manage);
+* [mongoDB](https://www.mongodb.com);
+* [PyMongo](https://api.mongodb.com/python/current/);
+* [Pandas](https://pandas.pydata.org);
+* [csv](https://docs.python.org/3/library/csv.html);
+* [Selenium](http://www.seleniumhq.org);
+* [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/);
+* [time](https://docs.python.org/3/library/time.html);
+* [getpass](https://docs.python.org/3.6/library/getpass.html) - para o caso de precisar um login.
 
-* [mongoDB](https://www.mongodb.com)
-
-
-* [PyMongo](https://api.mongodb.com/python/current/)
+Para utilizar o Selenium, é necessário de uma API [WebDriver](http://www.seleniumhq.org/projects/webdriver/), como por exemplo, o [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) (uma implementação que controla um navegador Chrome executado na máquina local).
 
 ## Informações dos Dados Extraídos
 
