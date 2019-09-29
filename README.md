@@ -27,9 +27,15 @@ A coleta dos dados foi feita utilizando uma API-Wrapper baseada em Python para a
 * [PyMongo](https://api.mongodb.com/python/current/);
 * [Pandas](https://pandas.pydata.org);
 * [csv](https://docs.python.org/3/library/csv.html);
+* [pickle](https://docs.python.org/3/library/pickle.html#module-pickle);
 * [Selenium](http://www.seleniumhq.org);
 * [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/);
 * [time](https://docs.python.org/3/library/time.html);
+* [os](https://docs.python.org/3/library/os.html);
+* [itertools](https://docs.python.org/3/library/itertools.html);
+* [gc](https://docs.python.org/3/library/gc.html);
+* [tqdm](https://tqdm.github.io);
+* [configparser](https://docs.python.org/3/library/configparser.html);
 * [getpass](https://docs.python.org/3.6/library/getpass.html) - para o caso de precisar um login.
 
 Para utilizar o Selenium, é necessário de uma API [WebDriver](http://www.seleniumhq.org/projects/webdriver/), como por exemplo, o [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) (uma implementação que controla um navegador Chrome executado na máquina local).
