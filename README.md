@@ -42,3 +42,5 @@ Para utilizar o Selenium, é necessário de uma API [WebDriver](http://www.selen
 
 ## Informações dos Dados Extraídos
 
+Inicialmente os dados extraídos são armazenados em dois dicionários: [`info_journals`](https://github.com/anacwagner/scopus-scraping/blob/master/pickles/README.md#info_journals) e [`info_articles`](https://github.com/anacwagner/scopus-scraping/blob/master/pickles/README.md#info_articles). Em seguida, utilizando o PyMongo é obtida a rede de citações [`var_cit_LOGIC.csv`](https://github.com/anacwagner/scopus-scraping/tree/master/outputs). 
+
