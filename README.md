@@ -40,6 +40,23 @@ A coleta dos dados foi feita utilizando uma API-Wrapper baseada em Python para a
 
 Para utilizar o Selenium, é necessário de uma API [WebDriver](http://www.seleniumhq.org/projects/webdriver/), como por exemplo, o [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) (uma implementação que controla um navegador Chrome executado na máquina local).
 
+## Alteração na Biblioteca `pybliometrics`
+Como as chaves são geradas automaticamente durante o scraping, elas também precisam ser atualizadas automaticamente de acordo com a nova chave editada no arquivo `.scopus/config`. Simplesmente modificar esse arquivo com a nova chave não adianta, pois para as funções da biblioteca serem lidas com a nova chave, a função tem que ser importada novamente. Quando fazemos o *import* da biblioteca, ela extrai tudo o que precisa uma vez só, então mesmo que o arquivo config seja alterado durante o processo, as funções da biblioteca não capturam a nova chave. 
+
+Para contornar esse problema, basta modificar o arquivo `get_content.py` da pasta `../Anaconda3/Lib/site-packages/pybliometrics/scopus/utils`. 
+
+```python
+import configparser as cf #linha 4 adiconada
+...
+def cache_file(url, params={}, **kwds):
+  ...
+  # Get credentials and set request headers
+  config2 = cf.ConfigParser() # linha 51 adicionada
+  config2.read('C:/Users/Walter/.scopus/config.ini') #linha 52 adicionada
+  key = config2.get('Authentication', 'APIKey') #linha 53 modificada
+  ...
+```
+
 ## Informações dos Dados Extraídos
 
 Inicialmente os dados extraídos são armazenados em dois dicionários: [`info_journals`](https://github.com/anacwagner/scopus-scraping/blob/master/pickles/README.md#info_journals) e [`info_articles`](https://github.com/anacwagner/scopus-scraping/blob/master/pickles/README.md#info_articles). Em seguida, utilizando o PyMongo é obtida a rede de citações [`var_cit_LOGIC.csv`](https://github.com/anacwagner/scopus-scraping/tree/master/outputs). 
