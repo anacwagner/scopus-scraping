@@ -61,3 +61,7 @@ def cache_file(url, params={}, **kwds):
 
 Inicialmente os dados extraídos são armazenados em dois dicionários: [`info_journals`](https://github.com/anacwagner/scopus-scraping/blob/master/pickles/README.md#info_journals) e [`info_articles`](https://github.com/anacwagner/scopus-scraping/blob/master/pickles/README.md#info_articles). Em seguida, utilizando o PyMongo é obtida a rede de citações [`var_cit_LOGIC.csv`](https://github.com/anacwagner/scopus-scraping/tree/master/outputs). 
 
+
+## Análises dos Resultados
+
+https://nbviewer.jupyter.org/github/anacwagner/scopus-scraping/blob/master/Análise%20dos%20Resultados%20-%20Lógica.ipynb
